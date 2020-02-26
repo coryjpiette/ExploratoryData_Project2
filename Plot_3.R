@@ -1,3 +1,7 @@
+# on-road, non-road, and non-point sources decrease form 1999-2008
+# point source increase from 1999-2008
+
+
 nei.baltimore <- NEI %>% filter(fips == "24510") %>% group_by(type, year) %>% summarize(Annual.Total = sum(Emissions));
 nei.baltimore$type <- factor(nei.baltimore$type, levels = c("ON-ROAD", "NON-ROAD", "POINT", "NONPOINT")) # Re-order factor levels so they plot in the order we wish
 ggplot(nei.baltimore, aes(x = factor(year), y = Annual.Total, fill = type)) + 
