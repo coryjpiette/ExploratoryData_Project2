@@ -1,3 +1,5 @@
+# Yes, emissions decreased from 1999 - 2008. 
+
 annual <- NEI %>% group_by(year) %>% 
   filter(year == 1999|2002|2005|2008) %>% 
   summarize(Annual.Total = sum(Emissions));
