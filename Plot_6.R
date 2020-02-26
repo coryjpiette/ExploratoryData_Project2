@@ -1,3 +1,7 @@
+# Baltimore City has seen a negative 8% compound annual growth rate from 1999-2008
+# Los Angeles has experienced a positive 0.5% compound annual growth rate from 1999-2008 
+
+
 scc.vehicles <- SCC[grep("Mobile.*Vehicles", SCC$EI.Sector),  ]; # Pattern match mobile vehicles in SCC description
 scc.vehicles.list <- unique(scc.vehicles$SCC); # Create motor vehicle lookup list by SCC
 nei.vehicles <- subset(NEI, SCC %in% scc.vehicles.list); # Filter for motor vehicle sources
