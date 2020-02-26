@@ -1,3 +1,6 @@
+# emissions from motor vehicle sources in Baltimore City decreased from 1999-2008
+
+
 scc.vehicles <- SCC[grep("Mobile.*Vehicles", SCC$EI.Sector),  ]; # Pattern match mobile vehicles in SCC description
 scc.vehicles.list <- unique(scc.vehicles$SCC); # Create motor vehicle lookup list by SCC
 nei.vehicles <- subset(NEI, SCC %in% scc.vehicles.list); # Filter for motor vehicle sources
