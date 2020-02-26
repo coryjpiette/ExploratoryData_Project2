@@ -1,5 +1,7 @@
+# Yes, there is a net decrease from 1999 - 2008, but does not decrease each year.
+
 baltimore <- NEI %>% 
-  filter(fips == "24510") %>% 
+ filter(fips == "24510") %>% 
   group_by(year) %>% 
   summarize(Annual.Total = sum(Emissions));
 baltimore.pts <- pretty(baltimore$Annual.Total/1000);
