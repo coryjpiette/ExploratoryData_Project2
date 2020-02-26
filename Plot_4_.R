@@ -1,3 +1,6 @@
+# emissions from coal combustion-relates sources decreased from 1999-2008.
+
+
 scc.coal <- SCC[grep("Fuel Comb.*Coal", SCC$EI.Sector),  ];
 scc.coal.list <- unique(scc.coal$SCC);
 nei.coal <- subset(NEI, SCC %in% scc.coal.list);
